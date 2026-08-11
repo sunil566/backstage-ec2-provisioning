@@ -1,0 +1,50 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+
+metadata:
+  name: backstage-ec2-provisioning
+  title: Backstage EC2 Provisioning
+  description: Provision an AWS EC2 instance using Terraform
+
+spec:
+  owner: user:guest
+  type: service
+
+  parameters:
+    - title: EC2 Details
+      required:
+        - instanceName
+        - instanceType
+        - amiId
+      properties:
+        instanceName:
+          title: Instance Name
+          type: string
+          description: A friendly name for the EC2 instance
+          default: backstage-ec2
+
+        instanceType:
+          title: Instance Type
+          type: string
+          description: The AWS EC2 instance type
+          default: t3.micro
+          enum:
+            - t3.micro
+            - t3.small
+            - t3.medium
+
+        amiId:
+          title: AMI ID
+          type: string
+          description: The AMI ID to use for the EC2 instance
+
+  steps:
+    - id: fetch
+      name: Fetch Terraform scaffold
+      action: fetch:template
+      input:
+        url: ./terraform
+        values:
+          instanceName: "{{ parameters.instanceName }}"
+          instanceType: "{{ parameters.instanceType }}"
+          amiId: "{{ parameters.amiId }}"
