@@ -7,4 +7,5 @@ metadata:
     - provisioning
 spec:
   type: service
+  lifecycle: experimental
   owner: user:guest
