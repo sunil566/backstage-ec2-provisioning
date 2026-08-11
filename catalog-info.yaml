@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-ec2-provisioning
+  description: Backstage EC2 provisioning component
+  tags:
+    - provisioning
+spec:
+  type: service
+  owner: user:guest
