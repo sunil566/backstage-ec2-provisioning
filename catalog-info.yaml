@@ -6,8 +6,8 @@ metadata:
   annotations:
     github.com/project-slug: sunil566/backstage-ec2-provisioning
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: experimental
   owner: user:sunil566
 ---
 apiVersion: backstage.io/v1alpha1
