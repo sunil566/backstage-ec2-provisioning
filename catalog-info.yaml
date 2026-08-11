@@ -2,10 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: backstage-ec2-provisioning
-  description: Backstage EC2 provisioning component
-  tags:
-    - provisioning
+  annotations:
+    github.com/project-slug: sunil566/backstage-ec2-provisioning
 spec:
-  type: service
-  lifecycle: experimental
-  owner: user:guest
+  type: other
+  lifecycle: unknown
+  owner: user:sunil566
