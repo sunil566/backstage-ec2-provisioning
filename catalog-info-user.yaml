@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+
+metadata:
+  name: sunil566
+  annotations:
+    github.com/user-login: sunil566
+
+spec:
+  profile:
+    displayName: Sunil Kumar
+    email: sunil566@gmail.com
+
+  memberOf: []
