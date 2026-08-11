@@ -17,7 +17,7 @@ metadata:
   namespace: default
   annotations:
     github.com/user-login: sunil566
-    github.com/user-id: "72131621"
+    github.com/user-id: 72131621
 spec:
   profile:
     displayName: Sunil Kumar
