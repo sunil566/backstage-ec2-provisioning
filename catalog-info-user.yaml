@@ -3,6 +3,7 @@ kind: User
 
 metadata:
   name: sunil566
+  namespace: default
   annotations:
     github.com/user-login: sunil566
     github.com/user-id: "72131621"

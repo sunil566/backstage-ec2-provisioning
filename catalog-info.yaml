@@ -2,9 +2,24 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: backstage-ec2-provisioning
+  namespace: default
   annotations:
     github.com/project-slug: sunil566/backstage-ec2-provisioning
 spec:
   type: other
   lifecycle: unknown
   owner: user:sunil566
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: sunil566
+  namespace: default
+  annotations:
+    github.com/user-login: sunil566
+    github.com/user-id: "72131621"
+spec:
+  profile:
+    displayName: Sunil Kumar
+    email: sunil566@gmail.com
+  memberOf: []
